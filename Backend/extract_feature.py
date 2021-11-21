@@ -1,10 +1,12 @@
 import librosa
 import numpy as np
 import joblib
+import convert
 
 scaler = joblib.load('Backend/scaler.pkl')
 
 def load(path):
+    path = convert.mp3_to_wav(path)
     return librosa.load(path)
 
 def extract(y, sr):
@@ -53,5 +55,5 @@ def extract(y, sr):
     return feature
 
 if(__name__=='__main__'):
-    a, b = load('Data/genres_original/blues/blues.00000.wav')
+    a, b = load('audio.mp3')
     print(extract(a, b))
