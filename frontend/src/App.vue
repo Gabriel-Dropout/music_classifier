@@ -1,16 +1,20 @@
 <template>
   <div id="app">
-    <HelloWorld/>
+    <!--Header/-->
+    <div id="content" class="content">
+      <router-view></router-view>
+    </div>
+  
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  //import Header from './components/Header.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    name: 'App',
+    components: {
+      //Header
+    }
   }
-}
 </script>

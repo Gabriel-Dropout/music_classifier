@@ -6,7 +6,7 @@ def get_audio(id):
         id = 'https://www.youtube.com/watch?v=' + id
     yt = YouTube(id)
 
-    print(yt.streams.filter(only_audio=True, file_extension='mp4').first())
+    print(yt.streams.filter(only_audio=True).first())
 
     # 특정영상 다운로드
     yt.streams.filter(only_audio=True, file_extension='mp4').first().download(filename="audio.mp3")
