@@ -9,5 +9,6 @@ key.pub
 
 dist/
 frontend/dist/
+frontend/.env.local
 
 Backend/__pycache__/
