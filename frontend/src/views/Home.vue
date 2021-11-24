@@ -47,7 +47,7 @@
         let formData = new FormData();
         await formData.append('file', e.target.files[0]);
         try {
-          let res = await axios.post('http://localhost:5000/upload',
+          let res = await axios.post(process.env.VUE_APP_BACKEND_BASE_URL+'/upload',
             formData, {
               headers: {
                 'Content-Type': 'multipart/form-data'
@@ -65,7 +65,7 @@
         this.loading = true;
         try {
           let res = await axios.get(
-            'http://localhost:5000/search?v=' + e
+            process.env.VUE_APP_BACKEND_BASE_URL+'/search?v=' + e
           );
           this.loading = false;
           alert(res['data']);

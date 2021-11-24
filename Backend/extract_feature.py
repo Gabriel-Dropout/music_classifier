@@ -3,7 +3,7 @@ import numpy as np
 import joblib
 import convert
 
-scaler = joblib.load('Backend/scaler.pkl')
+scaler = joblib.load('/Backend/scaler.pkl')
 
 def load(path):
     path = convert.mp3_to_wav(path)

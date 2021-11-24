@@ -3,3 +3,11 @@ Data/
 frontend/node_modules/
 *.wav
 *.mp3
+
+key
+key.pub
+
+dist/
+frontend/dist/
+
+Backend/__pycache__/

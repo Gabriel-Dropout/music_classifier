@@ -29,7 +29,7 @@ def upload():
 
 #음악 검색 요청
 @app.route('/search', methods = ['GET'])
-async def search():
+def search():
     vid = request.args.to_dict().get("v", 'DXGe4mn_2Js')
     print(vid)
     get_audio(vid)
@@ -45,4 +45,4 @@ def main():
     return "asd";
  
 if __name__ == '__main__':
-    app.run(port=5000)
+    app.run(host="0.0.0.0",port=5000)
